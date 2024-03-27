@@ -4,16 +4,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
 
+    </data>
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/root_view"
-        tools:context=".login.LoginActivity"
+        tools:context=".signin.LoginActivity"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
         android:orientation="vertical"
         android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fitsSystemWindows="true"
         android:background="#F0F6FC">
 
         <androidx.appcompat.widget.AppCompatImageView
@@ -27,7 +30,7 @@
             app:layout_constraintStart_toStartOf="parent"
             />
 
-        <androidx.appcompat.widget.AppCompatEditText
+        <EditText
             android:id="@+id/etx_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -36,11 +39,15 @@
             android:layout_marginHorizontal="20dp"
             android:paddingHorizontal="25dp"
             android:paddingVertical="15dp"
+            android:inputType="textEmailAddress"
+            android:imeOptions="actionNext"
             android:hint="이메일 주소"
+            android:textSelectHandle="@color/foundation_blue_500"
+            android:textCursorDrawable="@drawable/etx_cursor"
+            android:textColorHighlight="@color/foundation_blue_300"
+            android:maxLines="1"
             android:textColorHint="#D9D9D9"
-            app:layout_constraintTop_toBottomOf="@id/login_logo"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/black"
             />
 
         <androidx.appcompat.widget.AppCompatEditText
@@ -51,7 +58,10 @@
             android:layout_marginVertical="20dp"
             android:background="@drawable/etx_bg_round_30dp"
             android:hint="비밀번호"
+            android:textColor="@color/black"
             android:textColorHint="#D9D9D9"
+            android:maxLines="1"
+            android:inputType="textPassword"
             android:paddingHorizontal="25dp"
             android:paddingVertical="15dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -77,7 +87,7 @@
             />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_signup"
+            android:id="@+id/btn_go_signin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="회원가입 버튼"

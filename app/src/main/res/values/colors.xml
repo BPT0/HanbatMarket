@@ -10,11 +10,14 @@
     <color name="light_gray">#D9D9D9</color>
     
     <!--    text color -->
+    <color name="text_color">#D9D9D9</color>
     <color name="text_title1_black">#2A2A2A</color>
     <color name="text_title2_black">#000000</color>
     <color name="text_info_gray">#8C8C8C</color>
     <color name="text_rbtn_gray">#757575</color>
+    <color name="text_hint_color">#D9D9D9</color>
 
+    <color name="foundation_blue_300">#9BC3EA</color>
     <color name="foundation_blue_400">#88B7E5</color>
     <color name="foundation_blue_500">#6AA5DF</color>
     <color name="foundation_blue_600">#6096CB</color>

@@ -3,7 +3,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".login.SignInActivity">
+    tools:context=".signin.SigninActivity">
+
+    <data>
+        <variable
+            name="signinViewModel"
+            type="com.hanbat.hanbatmarket.signin.SigninViewModel" />
+    </data>
 
     <ScrollView
         android:id="@+id/root_view"
@@ -241,7 +247,7 @@
                 android:layout_marginTop="64dp"
                 android:padding="0dp"
                 android:includeFontPadding="false"
-                android:text="먼저 사용할 닉네임을 입력해주세요."
+                android:text="비밀번호를 한 번 더 확인해주세요."
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:fontFamily="@font/notosanskr_regular"
@@ -255,7 +261,7 @@
                 android:layout_marginTop="20dp"
                 android:paddingHorizontal="25dp"
                 android:paddingVertical="15dp"
-                android:hint="이메일 주소"
+                android:hint="비밀번호"
                 android:textColorHint="#D9D9D9"
                 app:layout_constraintTop_toBottomOf="@id/tv_pw_chk_info"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -279,10 +285,10 @@
                 />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btn_signup"
+                android:id="@+id/btn_signin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:contentDescription="로그인 버튼"
+                android:contentDescription="가입하기 버튼"
                 android:background="@drawable/btn_bg_round_30dp"
                 android:layout_marginTop="128dp"
                 android:layout_marginBottom="16dp"
@@ -290,12 +296,14 @@
                 android:paddingVertical="15dp"
                 android:textColor="@color/white"
                 android:textSize="20sp"
-                android:text="로그인"
+                android:text="가입하기"
                 app:layout_constraintTop_toBottomOf="@id/tv_pw_chk_err"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 />
+
+<!--            android:onClick="@{() -> signinViewModel.onSigninClicked()}"-->
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 

@@ -8,13 +8,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/root_view"
-        tools:context=".login.SigninSuccessActivity"
+        tools:context=".signin.SigninSuccessActivity"
         android:fitsSystemWindows="true"
         android:orientation="vertical"
         android:background="@color/backgroundColor">
 
         <androidx.appcompat.widget.LinearLayoutCompat
-            tools:context=".login.SigninSuccessActivity"
+            tools:context=".signin.SigninSuccessActivity"
             android:orientation="vertical"
             android:layout_gravity="center"
             android:gravity="center"
