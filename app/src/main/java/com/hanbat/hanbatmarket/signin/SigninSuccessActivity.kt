@@ -1,4 +1,4 @@
-package com.hanbat.hanbatmarket.login
+package com.hanbat.hanbatmarket.signin
 
 import android.content.Intent
 import android.graphics.Color
@@ -9,11 +9,11 @@ import android.view.WindowInsetsController
 import androidx.core.view.WindowCompat
 import com.hanbat.hanbatmarket.R
 import com.hanbat.hanbatmarket.base.BaseActivity
-import com.hanbat.hanbatmarket.databinding.ActivitySigninBinding
+import com.hanbat.hanbatmarket.databinding.ActivitySigninSucessBinding
 
-class SignInActivity : BaseActivity<ActivitySigninBinding>() {
-    override val TAG: String = SignInActivity::class.java.simpleName
-    override val layoutRes: Int = R.layout.activity_signin
+class SigninSuccessActivity : BaseActivity<ActivitySigninSucessBinding>(){
+    override val TAG: String = LoginActivity::class.java.simpleName
+    override val layoutRes: Int = R.layout.activity_signin_sucess
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,11 +35,9 @@ class SignInActivity : BaseActivity<ActivitySigninBinding>() {
         }
 
         // 가입 완료화면으로 이동
-        binding.btnSignup.setOnClickListener {
-            val intent = Intent(this, SigninSuccessActivity::class.java)
+        binding.btnLogin.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
     }
-
-
 }
